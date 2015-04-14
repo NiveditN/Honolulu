@@ -1,0 +1,54 @@
+<section class="row" data-ng-controller="AuthenticationController">
+
+	<div class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4 login-form-bg">
+
+		<h3 class="text-center">Login</h3>
+
+		<form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">
+
+			<fieldset>
+
+				<!-- error -->
+				<div data-ng-show="error" class="text-center text-danger">
+					<div class="form-group">
+						<div class="alert alert-danger">
+							<span data-ng-bind="error"></span>
+						</div>
+					</div>
+				</div>
+
+				<!-- username -->
+				<div class="form-group">
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon">
+							<i class="text-muted glyphicon glyphicon-user"></i>
+						</span>
+						<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username">
+					</div>
+				</div>
+
+				<!-- password -->
+				<div class="form-group">
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon">
+							<i class="text-muted glyphicon glyphicon-asterisk"></i>
+						</span>
+					<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
+					</div>
+				</div>
+				</br>
+
+				<!-- button -->
+				<div class="text-center form-group">
+					<button type="submit" class="btn btn-success btn-lg btn-block">Sign in</button>
+				</div>
+
+				<!-- forgot password | sign up -->
+				<div class="forgot-password text-center form-group">
+					<a href="/#!/password/forgot">Forgot your password? </a> | <a href="/#!/signup">Sign up</a></a>
+				</div>
+
+			</fieldset>
+		</form>
+	</div>
+</section>
